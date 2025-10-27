@@ -62,7 +62,7 @@ DB_SERVER=localhost
 DB_PORT=3306
 DB_NAME=schoolschedulingdb
 DB_USER=root
-DB_PASSWORD=your_password_here
+DB_PASSWORD=your_password_here  # Hint: it's a pound with favourite password of yours with 7 at the end
 DB_CHARSET=utf8mb4
 ```
 
