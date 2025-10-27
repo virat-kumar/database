@@ -7,7 +7,7 @@
    - Port: 3306
    - Database: SchoolSchedulingDB
    - Username: root
-   - Password: #Unlockme007
+   - Password: (stored in .env file)
 
 2. **Installed all required packages** via conda
    - python-dotenv
@@ -51,7 +51,7 @@ MySQL requires you to reset the root password before you can use it. This is a s
    ```bash
    mysql -u root -p --connect-expired-password
    ```
-   When prompted, enter: `#Unlockme007`
+   When prompted, enter your password from .env file
 
 5. **Run the reset script**:
    ```bash
@@ -60,7 +60,7 @@ MySQL requires you to reset the root password before you can use it. This is a s
    
    OR manually type:
    ```sql
-   ALTER USER 'root'@'localhost' IDENTIFIED BY '#Unlockme007';
+   ALTER USER 'root'@'localhost' IDENTIFIED BY 'your_password_here';
    ALTER USER 'root'@'localhost' PASSWORD EXPIRE NEVER;
    FLUSH PRIVILEGES;
    EXIT;
@@ -72,7 +72,7 @@ MySQL requires you to reset the root password before you can use it. This is a s
 2. Connect to localhost
 3. It will prompt about expired password
 4. Follow the wizard to change password
-5. Set password to: `#Unlockme007`
+5. Set password to match your .env file
 
 ### **Method 3: Using Windows Services**
 
@@ -94,7 +94,7 @@ cd "C:\Program Files\MySQL\MySQL Server 8.0\bin"
 mysql -u root -p < "C:\Users\virat\OneDrive\Projects\database\create_db.sql"
 ```
 
-Enter password when prompted: `#Unlockme007`
+Enter password when prompted (from your .env file)
 
 ### Step 2: Test Connection
 ```bash
@@ -155,7 +155,7 @@ mysql -u root -p --connect-expired-password
 
 ### Reset Password
 ```sql
-ALTER USER 'root'@'localhost' IDENTIFIED BY '#Unlockme007';
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'your_password_here';
 ALTER USER 'root'@'localhost' PASSWORD EXPIRE NEVER;
 FLUSH PRIVILEGES;
 ```
@@ -180,5 +180,5 @@ Check these files:
 
 ## 🔐 Security Note
 
-Your `.env` file contains the password `#Unlockme007` and is already in `.gitignore` to prevent accidental commits to git.
+Your `.env` file contains your database password and is already in `.gitignore` to prevent accidental commits to git.
 

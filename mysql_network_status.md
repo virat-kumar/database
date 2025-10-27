@@ -75,7 +75,7 @@ Currently, your root user is configured for `'root'@'localhost'` only.
 
 To allow network connections, you'd need to create a user like:
 ```sql
-CREATE USER 'root'@'%' IDENTIFIED BY '#Unlockme007';
+CREATE USER 'root'@'%' IDENTIFIED BY 'your_password_here';
 GRANT ALL PRIVILEGES ON *.* TO 'root'@'%';
 FLUSH PRIVILEGES;
 ```

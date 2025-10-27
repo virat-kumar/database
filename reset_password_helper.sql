@@ -2,7 +2,7 @@
 -- Run this script after connecting with: mysql -u root -p --connect-expired-password
 
 -- Reset the password to match .env file
-ALTER USER 'root'@'localhost' IDENTIFIED BY '#Unlockme007';
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'your_password_here';
 
 -- Set password to never expire
 ALTER USER 'root'@'localhost' PASSWORD EXPIRE NEVER;
